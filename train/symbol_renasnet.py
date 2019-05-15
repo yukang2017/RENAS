@@ -402,7 +402,7 @@ def get_symbol(model_type='renasnet-ImageNet',
                                                            filter_scale=2,
                                                            num_reduction_layers=2,
                                                            is_training=is_training,
-                                                           dense_drop_ratio=0.2,
+                                                           dense_drop_ratio=0.5,
                                                            skip_reduction_layer_input=0)
         else:
             backbone_data=renasnet_backbone(normal_code=normal_code,
@@ -416,7 +416,7 @@ def get_symbol(model_type='renasnet-ImageNet',
                                             filter_scale=2,
                                             num_reduction_layers=2,
                                             is_training=is_training,
-                                            dense_drop_ratio=0.2,
+                                            dense_drop_ratio=0.5,
                                             skip_reduction_layer_input=0)
     elif model_type=='renasnet-ImageNet':
         classes = 1000
@@ -432,7 +432,7 @@ def get_symbol(model_type='renasnet-ImageNet',
                                                              filter_scale=2,
                                                              num_reduction_layers=2,
                                                              is_training=is_training,
-                                                             dense_drop_ratio=0.5,
+                                                             dense_drop_ratio=0.2,
                                                              skip_reduction_layer_input=0)
         else:
             backbone_data = renasnet_backbone(normal_code=normal_code,
@@ -446,7 +446,7 @@ def get_symbol(model_type='renasnet-ImageNet',
                                               filter_scale=2,
                                               num_reduction_layers=2,
                                               is_training=is_training,
-                                              dense_drop_ratio=0.5,
+                                              dense_drop_ratio=0.2,
                                               skip_reduction_layer_input=0)
     elif model_type=='renasnet-ImageNet-Large':
         classes = 1000
@@ -462,7 +462,7 @@ def get_symbol(model_type='renasnet-ImageNet',
                                                              filter_scale=2,
                                                              num_reduction_layers=2,
                                                              is_training=is_training,
-                                                             dense_drop_ratio=0.5,
+                                                             dense_drop_ratio=0.2,
                                                              skip_reduction_layer_input=0)
         else:
             backbone_data = renasnet_backbone(normal_code=normal_code,
@@ -476,7 +476,7 @@ def get_symbol(model_type='renasnet-ImageNet',
                                               filter_scale=2,
                                               num_reduction_layers=2,
                                               is_training=is_training,
-                                              dense_drop_ratio=0.5,
+                                              dense_drop_ratio=0.2,
                                               skip_reduction_layer_input=0)
     else:
         raise ValueError('no support model_type:{}'.format(model_type))
